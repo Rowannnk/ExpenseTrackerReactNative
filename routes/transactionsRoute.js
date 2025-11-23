@@ -9,9 +9,9 @@ import {
 
 const router = express.Router();
 
-router.get("/:userId", getTransactionsByUserId);
 router.post("/", createTransaction);
 router.delete("/:transactionId", deleteTransaction);
-router.get("/summary/:userId", getSummaryByUserId);
+router.get("/summary/:userId", getTransactionsSummary);
+router.get("/:userId", getTransactionsByUserId);
 
 export default router;
